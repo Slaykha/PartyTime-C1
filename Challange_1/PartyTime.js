@@ -49,6 +49,18 @@ const changeBgColor = () => {
     }
 }
 
+const jumpEffect = () => {
+    var h3 = document.getElementById("clock")
+    h3.classList.add("jumpH3")
+
+    h3.classList.add("jumpDownH3")
+    setTimeout(() => {
+        h3.classList.remove("jumpDownH3")
+        
+    }, 50);
+
+}
+
 function buttonClick(){
     document.body.style.background = "black";
     var button = document.getElementById("button")
@@ -83,25 +95,42 @@ const Square = () => {
 }
 
 function lifeGoesOn(){
-    var background = document.body
-    var lifeGoesOn = true
+    var h3 = document.getElementById("clock")
+    h3.classList.remove("animateH3")
 
-        setTimeout(() => {
+        setTimeout(() => {            
             changeBgColor()
+            jumpEffect()
+
+
             setTimeout(() => {
+                jumpEffect()
+
                 changeBgColor()
                 setTimeout(() => {
                     changeBgColor()
+                    jumpEffect()
+
                     setTimeout(() => {
                         changeBgColor()
+                        jumpEffect()
+
                         setTimeout(() => {
                             changeBgColor()
+                            jumpEffect()
+
                             setTimeout(() => {
                                 changeBgColor()
+                                jumpEffect()
+
                                 setTimeout(() => {
                                     changeBgColor()
+                                    jumpEffect()
+
                                     setTimeout(() => {
                                         changeBgColor()
+                                        jumpEffect()
+
                                         setTimeout(() => {
                                             opening.pause()
                                         }, 500);
